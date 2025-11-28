@@ -28,5 +28,7 @@ fclean:	clean
 re:		fclean all
 all:	${NAME}
 make:	make all
+a:
+	cc *.c ${LIBFT} -g -o s
 
 .PHONY: clean fclean re all

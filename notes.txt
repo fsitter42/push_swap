@@ -1,0 +1,10 @@
+INPUT:
+
+	if (atoi(input[i])) == 0 && input[i][0] != '0' > wenn atoi 0 ist aber nicht char "0" 
+	if strlen(input[i]) != strlen(itoa(atoi(input[i]))) && strchr(input[i][0], "=-")
+
+
+
+
+MAKEFILE:
+	delete make a
