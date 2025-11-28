@@ -5,7 +5,7 @@ INPUT:
 	if strlen(input[i]) != strlen(itoa(atoi(input[i]))) && strchr(input[i][0], "=-")
 
 
-
+	free itoa deswegen muss ich es in variablen speichern und dann strlen drauf laufen lassen
 
 MAKEFILE:
 	delete make a
