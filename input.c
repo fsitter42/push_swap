@@ -17,6 +17,7 @@ char		is_valid(char *avi, char* itoa_of_atoi);
 int			f_valid_integers_plus(char **av, int ac);
 long long	f_atol(const char *nptr); // delete
 int			f_int_borders(char **av, int ac); // delete
+int			f_find_duplicate(char **av, int ac);
 
 int	valid_integers_plus(char **av, int ac)
 {
@@ -129,4 +130,24 @@ int f_int_borders(char **av, int ac)
 		i++;
 	}
 	return (1);
+}
+
+int f_find_duplicate(char **av, int ac)
+{
+	int i;
+	int j;
+
+	i = 1;
+	while (i < ac)
+	{
+		j = i + 1;
+		while (av[j])
+		{
+			if (ft_atoi(av[i]) == ft_atoi(av[j]))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }
