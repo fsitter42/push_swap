@@ -19,7 +19,7 @@ RM = rm -f
 
 %.o: %.c
 	${CC} ${CFLAGS} $ -c $< -o $@
-${NAME}: ${OBJECTS}
+${NAME}: ${OBJECTS} ${HEADER}
 	${CC} ${CFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
 clean:	
 	${RM} ${OBJECTS}
