@@ -15,6 +15,8 @@
 
 // includes
 # include "libft/libft.h"
+# include <limits.h>
+
 
 // prototypes of structs
 typedef struct s_number	t_number;
@@ -41,5 +43,9 @@ typedef struct s_stack
 
 // input.c
 int						valid_integers_plus(char **av, int ac);
+char					is_valid(char *avi, char* itoa_of_atoi);
+int						f_valid_integers_plus(char **av, int ac);
+long long				f_atol(const char *nptr);
+int						f_int_borders(char **av, int ac);
 
 #endif

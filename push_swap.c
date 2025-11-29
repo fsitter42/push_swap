@@ -15,9 +15,14 @@
 int	main(int ac, char **av)
 {
 
-	if (!valid_integers_plus(av, ac))
-		ft_printf("PLUS: not valid\n");
-	else
-		ft_printf("PLUS: valid\n");
+	if (ac < 2)
+		return (0);
+	if (!f_valid_integers_plus(av, ac))
+		return(ft_printf("ERROR:\nList contains non Integers\n"), -1);
+	// if (!f_int_borders(av, ac))
+	// 	return(ft_printf("ERROR:\nPlease comply with INT_LIMITS\n"));
+
+	ft_printf("valid\n");
+
 
 }
