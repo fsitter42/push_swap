@@ -7,5 +7,8 @@ INPUT:
 
 	free itoa deswegen muss ich es in variablen speichern und dann strlen drauf laufen lassen
 
+	wenn +0 das letzte ist segvault also function-> ac == i return
+
+
 MAKEFILE:
 	delete make a
