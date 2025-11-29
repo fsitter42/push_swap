@@ -1,17 +1,11 @@
 INPUT:
 
-	<> INTMIN INTMAX
-	duplicates
-	not valid ints
+	in eine function zusammenführen
+	alte löschen
+	vl if ac < 3 weil man ncihts sortieren kann
 
-	??? If no parameters are specified, the program must not display anything and should
-	return to the prompt. ??? > normal a.out = if (ac < 2) return 0 in main???
-	if so delete line 72 und 73 in input.c
-	or return (2) and if this function returns 2 --> return 0 in main
-
-	oder zuerst if (ac < 2) return 0
-	dann f_valid_integers_plus 0 > error
-	
+	error
+	was ist std error???
 
 
 
