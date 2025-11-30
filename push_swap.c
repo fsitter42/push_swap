@@ -27,6 +27,7 @@ int	main(int ac, char **av)
 		return(ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
 	
 	f_free_stack(&stack_a);
+	f_free_stack(&stack_b);
 
 
 
