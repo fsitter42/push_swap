@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/29 14:29:37 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 00:53:23 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,20 @@
 
 int	main(int ac, char **av)
 {
-
 	t_stack stack_a;
 	t_stack stack_b;
 	if (ac < 2)
 		return (0);
 	if (!f_valid_integers_plus(av, ac))
-		return(ft_putstr_fd("ERROR:\nList contains non Integers or duplicates\n",2), 0);
+		return (ft_putstr_fd("ERROR:\nList contains non Integers or duplicates\n",
+				2), 0);
 	f_init_stack(&stack_a);
 	f_init_stack(&stack_b);
 	if (!f_fill_nodes(&stack_a, av, ac))
-		return(ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
-	
+		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
+
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 
-
-
 	ft_printf("valid\n");
-
-
 }
