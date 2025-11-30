@@ -21,7 +21,8 @@ int	main(int ac, char **av)
 		return (0);
 	if (!f_valid_integers_plus(av, ac))
 		return(ft_putstr_fd("ERROR:\nList contains non Integers or duplicates\n",2), 0);
-	f_init_stacks(&stack_a, &stack_b);
+	f_init_stack(&stack_a);
+	f_init_stack(&stack_b);
 	if (!f_fill_nodes(&stack_a, av, ac))
 		return(ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
 	

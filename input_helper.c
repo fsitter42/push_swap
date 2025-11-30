@@ -62,16 +62,12 @@ int f_find_duplicate(char **av, int ac)
 	return (0);
 }
 
-void		f_init_stacks(t_stack *a, t_stack *b)
+void		f_init_stack(t_stack *stack)
 {
-	a->first = NULL;
-	a->last = NULL;
-	a->size = 0;
-	b->first = NULL;
-	b->last = NULL;
-	b->size = 0;
+	stack->first = NULL;
+	stack->last = NULL;
+	stack->size = 0;
 }
-
 int 		f_fill_nodes(t_stack *a, char **av, int ac)
 {
 	while (ac > 1)
@@ -105,5 +101,5 @@ void    f_free_stack(t_stack *stack)
         free(current);
         current = next;
     }
-    f_init_stacks(stack, stack);
+    f_init_stack(stack);
 }
