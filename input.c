@@ -49,7 +49,7 @@ int	valid_integers_plus(char **av, int ac)
 	return (1);
 }
 
-char is_valid(char *avi, char* itoa_of_atoi)
+char is_valid2(char *avi, char* itoa_of_atoi)
 {
 	int j;
 
@@ -67,7 +67,18 @@ char is_valid(char *avi, char* itoa_of_atoi)
 	return ('j');
 }
 
-int	f_valid_integers_plus(char **av, int ac)
+char is_valid(char *avi, char* itoa_of_atoi)
+{
+	if (!ft_strncmp(avi, itoa_of_atoi, ft_strlen(avi)))
+		return ('j');
+	else if ((ft_strchr("+", avi[0])) && !(ft_strncmp(avi+1, itoa_of_atoi, (ft_strlen(avi)-1))))
+		return ('j');
+	else
+		return (48);
+}
+
+// delete
+int	f_valid_integers_plus2(char **av, int ac)
 {
 	char	*itoa_of_atoi;
 	int		i;
@@ -86,6 +97,31 @@ int	f_valid_integers_plus(char **av, int ac)
 			return(free(itoa_of_atoi), 0);
 		free(itoa_of_atoi);
 	}
+	return (1);
+}
+
+// this is it maybe put find duplicate at the end 
+int	f_valid_integers_plus(char **av, int ac)
+{
+	char	*itoa_of_atoi;
+	int		i;
+
+	i = 1;
+	while (i < ac)
+	{
+		itoa_of_atoi = ft_itoa(ft_atoi(av[i]));
+		if (!ft_strncmp(av[i], "-0", ft_strlen(av[i])))
+			i++;
+		else if (!ft_strncmp(av[i], itoa_of_atoi, ft_strlen(av[i])))
+			i++;
+		else if ((ft_strchr("+", av[i][0])) && !(ft_strncmp(av[i]+1, itoa_of_atoi, (ft_strlen(av[i])-1))))
+			i++;
+		else
+			return(free(itoa_of_atoi), 0);
+		free(itoa_of_atoi);
+	}
+	if (f_find_duplicate(av, ac))
+		return (0);
 	return (1);
 }
 
@@ -132,6 +168,7 @@ int f_int_borders(char **av, int ac)
 	return (1);
 }
 
+// das brauche ich:
 int f_find_duplicate(char **av, int ac)
 {
 	int i;
