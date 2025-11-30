@@ -14,6 +14,9 @@
 
 int			f_valid_integers_plus(char **av, int ac);
 int			f_find_duplicate(char **av, int ac);
+void		f_init_stacks(t_stack *a, t_stack *b);
+int 		f_fill_nodes(t_stack *a, char **av, int ac);
+void		f_free_stack(t_stack *stack);
 
 int	f_valid_integers_plus(char **av, int ac)
 {
@@ -57,4 +60,50 @@ int f_find_duplicate(char **av, int ac)
 		i++;
 	}
 	return (0);
+}
+
+void		f_init_stacks(t_stack *a, t_stack *b)
+{
+	a->first = NULL;
+	a->last = NULL;
+	a->size = 0;
+	b->first = NULL;
+	b->last = NULL;
+	b->size = 0;
+}
+
+int 		f_fill_nodes(t_stack *a, char **av, int ac)
+{
+	while (ac > 1)
+	{
+		t_number *new_node = malloc(sizeof(t_number));
+		if (!new_node)
+			return (0);
+		new_node->number = ft_atoi(av[ac-1]);
+		new_node->index = a->size;
+		new_node->previous = NULL;
+		new_node->next = a->first;
+		if (a->first != NULL)
+			a->first->previous = new_node;
+		a->first = new_node;
+		if (a->size == 0)
+			a->last = new_node;
+		a->size++;
+		ac--;
+	}
+	return (1);
+}
+
+void    f_free_stack(t_stack *stack)
+{
+    t_number *current = stack->first;
+    while(current)
+    {
+        ft_printf("NUMBER %i\tINDEX %i\n", current->number, current->index); // delete later
+        t_number *next;
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    f_init_stacks(stack, stack);
 }

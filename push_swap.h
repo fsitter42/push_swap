@@ -25,7 +25,7 @@ typedef struct s_stack	t_stack;
 // struct to safe each individual nr
 typedef struct s_number
 {
-	long				number;
+	int					number;
 	int					index;
 	t_number			*previous;
 	t_number			*next;
@@ -41,8 +41,11 @@ typedef struct s_stack
 
 // prototypes of functions
 
-// input.c
+// input_helper.c
 int						f_valid_integers_plus(char **av, int ac);
 int						f_find_duplicate(char **av, int ac);
+void					f_init_stacks(t_stack *a, t_stack *b);
+int 					f_fill_nodes(t_stack *a, char **av, int ac);
+void					f_free_stack(t_stack *stack);
 
 #endif

@@ -1,13 +1,16 @@
 INPUT:
-
-	in eine function zusammenführen
-	alte löschen
 	vl if ac < 3 weil man ncihts sortieren kann
 
-	error
-	was ist std error???
+	
+INPUT > STRUCTS:
 
+int fillnodes(av, ac) -> if fail need free and return value for error
+in
 
 
 MAKEFILE:
 	delete make a
+
+
+HELPER.c
+	delete ft_printf line 
