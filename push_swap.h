@@ -42,11 +42,7 @@ typedef struct s_stack
 // prototypes of functions
 
 // input.c
-int						valid_integers_plus(char **av, int ac);
-char					is_valid(char *avi, char* itoa_of_atoi);
 int						f_valid_integers_plus(char **av, int ac);
-long long				f_atol(const char *nptr);
-int						f_int_borders(char **av, int ac);
 int						f_find_duplicate(char **av, int ac);
 
 #endif
