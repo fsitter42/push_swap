@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input.c                                            :+:      :+:    :+:   */
+/*   input_helper.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 13:03:48 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/29 15:00:49 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 00:33:44 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			f_valid_integers_plus(char **av, int ac);
 int			f_find_duplicate(char **av, int ac);
-void		f_init_stacks(t_stack *a, t_stack *b);
+void		f_init_stack(t_stack *stack);
 int 		f_fill_nodes(t_stack *a, char **av, int ac);
 void		f_free_stack(t_stack *stack);
 
