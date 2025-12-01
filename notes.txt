@@ -11,6 +11,11 @@ OPERATIONS:
 	do all OPERATIONS
 	in ss do sa or sb if the other doesnt do anything????
 
+	push_operations.c
+	rotate_operations.c
+	rev_rotate_operations.c
+	
+
 
 INDEXES:
 	sort the indexes bubblesort with number->indexes
