@@ -2,15 +2,16 @@ INPUT:
 	vl if ac < 3 weil man ncihts sortieren kann
 
 	
-INPUT > STRUCTS:
-
-int fillnodes(av, ac) -> if fail need free and return value for error
-in
-
 
 MAKEFILE:
 	delete make a
 
 
-HELPER.c
-	delete ft_printf line 
+OPERATIONS:
+	do all OPERATIONS
+	in ss do sa or sb if the other doesnt do anything????
+
+
+INDEXES:
+	sort the indexes bubblesort with number->indexes
+
