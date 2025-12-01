@@ -1,7 +1,9 @@
 NAME = push_swap
 
 SOURCE = 	push_swap.c \
-			main.c
+			input_helper.c \
+			operations.c
+
 			
 
 HEADER = push_swap.h

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 00:53:23 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 01:33:11 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,12 @@ int	main(int ac, char **av)
 	f_init_stack(&stack_b);
 	if (!f_fill_nodes(&stack_a, av, ac))
 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
-
+	
+	f_print_stack(stack_a);
+	// f_print_stack(stack_a);
+	// f_print_stack(&stack_a);
+	sa(&stack_a);
+	ft_printf("\n");
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 

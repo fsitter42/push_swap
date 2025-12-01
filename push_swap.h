@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 00:41:24 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 01:32:17 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,12 @@ void					f_init_stack(t_stack *stack);
 int						f_fill_nodes(t_stack *a, char **av, int ac);
 void					f_free_stack(t_stack *stack);
 
-// operations.c
-void					swap(t_stack *stack);
-void					swap_a(t_stack *stack_a);
+// helper_2.c
+void					f_print_stack(t_stack stack);
+
+// swap_operations.c
+int						f_swap(t_stack *stack);
+void					sa(t_stack *stack_a);
+void					sb(t_stack *stack_b);
+void					ss(t_stack *stack_a, t_stack *stack_b);
 #endif
