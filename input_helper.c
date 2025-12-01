@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 13:03:48 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 01:02:25 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 01:34:45 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ void    f_free_stack(t_stack *stack)
     t_number *current = stack->first;
     while(current)
     {
-        ft_printf("NUMBER %i\tINDEX %i\n", current->number, current->index); // delete later
         t_number *next;
         next = current->next;
         free(current);
