@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 13:03:48 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 01:34:45 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 10:27:00 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	f_valid_integers_plus(char **av, int ac)
 			i++;
 		else if (!ft_strncmp(av[i], itoa_of_atoi, ft_strlen(av[i])))
 			i++;
+		else if (!ft_strncmp(av[i], "+", ft_strlen(av[i])))
+			return(free(itoa_of_atoi), 0);
 		else if ((ft_strchr("+", av[i][0])) && !(ft_strncmp(av[i]+1, itoa_of_atoi, (ft_strlen(av[i])-1))))
 			i++;
 		else
