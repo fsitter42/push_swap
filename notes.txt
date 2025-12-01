@@ -20,3 +20,6 @@ OPERATIONS:
 INDEXES:
 	sort the indexes bubblesort with number->indexes
 
+radix
+junk
+turk
