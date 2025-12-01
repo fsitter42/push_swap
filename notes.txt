@@ -23,3 +23,28 @@ INDEXES:
 radix
 junk
 turk
+
+maxruns()
+{
+	while (max_index >> i != 0)
+		i++;
+	return i;
+}
+
+int i = 0
+while (i < maxruns)
+{
+	while (j < stacka->size)
+	{
+		if index >> i == 0
+			push to b
+		else
+			rotate to bottom
+		j++;
+			
+	}
+	i++;
+}
+
+
+
