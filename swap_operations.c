@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   swap_operations.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 00:26:46 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 01:31:44 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 15:59:15 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ int	f_swap(t_stack *stack)
 	t_number	*second;
 	t_number	*third;
 
-	if (stack->size < 2 || !stack->first || !stack->first->next)
+	if (stack->size < 2 || !stack->top || !stack->top->next)
 		return (0);
-	first = stack->first;
+	first = stack->top;
 	second = first->next;
 	third = second->next;
-	stack->first = second;
+	
+	stack->top = second;
 	second->next = first;
 	first->next = third;
+	
 	if (third)
 		third->previous = first;
 	first->previous = second;

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 01:02:03 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 14:56:51 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 16:27:08 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	f_print_stack(t_stack stack)
 {
 	t_number	*current;
 
-	current = stack.first;
+	current = stack.top;
 	while (current)
 	{
 		ft_printf("NUMBER %i\tINDEX %i\n", current->number, current->index);

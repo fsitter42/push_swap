@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 13:03:48 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 15:00:32 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 16:28:15 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int	f_find_duplicate(char **av, int ac, int i)
 
 void	f_init_stack(t_stack *stack)
 {
-	stack->first = NULL;
-	stack->last = NULL;
+	stack->top = NULL;
+	stack->bottom = NULL;
 	stack->size = 0;
 }
 
@@ -77,12 +77,12 @@ int	f_fill_nodes(t_stack *a, char **av, int ac, int i)
 		new_node->number = ft_atoi(av[ac - 1]);
 		new_node->index = a->size;
 		new_node->previous = NULL;
-		new_node->next = a->first;
-		if (a->first != NULL)
-			a->first->previous = new_node;
-		a->first = new_node;
+		new_node->next = a->top;
+		if (a->top != NULL)
+			a->top->previous = new_node;
+		a->top = new_node;
 		if (a->size == 0)
-			a->last = new_node;
+			a->bottom = new_node;
 		a->size++;
 		ac--;
 	}
@@ -94,7 +94,7 @@ void	f_free_stack(t_stack *stack)
 	t_number	*current;
 	t_number	*next;
 
-	current = stack->first;
+	current = stack->top;
 	while (current)
 	{
 		next = current->next;

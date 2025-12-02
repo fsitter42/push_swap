@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 12:33:06 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 16:24:15 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ typedef struct s_number
 // struct to store info about stack
 typedef struct s_stack
 {
-	t_number			*first;
-	t_number			*last;
+	t_number			*top;
+	t_number			*bottom;
 	size_t				size;
 }						t_stack;
 
@@ -63,4 +63,10 @@ void					ss(t_stack *stack_a, t_stack *stack_b);
 int						f_push(t_stack *stack_a, t_stack *stack_b);
 void					pa(t_stack *stack_a, t_stack *stack_b);
 void					pb(t_stack *stack_a, t_stack *stack_b);
+
+// rotate_operations.c
+int						f_rotate(t_stack *stack);
+void					ra(t_stack *stack_a);
+void					rb(t_stack *stack_b);
+void					rr(t_stack *stack_a, t_stack *stack_b);
 #endif
