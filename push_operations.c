@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 01:43:30 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 13:33:54 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 14:55:28 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	f_push(t_stack *stack_a, t_stack *stack_b)
 	first_a = stack_a->first;
 	first_b = stack_b->first;
 	second_b = first_b->next;
-	
 	stack_b->first = second_b;
 	if (second_b)
 		second_b->previous = NULL;

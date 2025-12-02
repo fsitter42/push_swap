@@ -6,7 +6,7 @@
 #    By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/08 13:34:32 by fsitter           #+#    #+#              #
-#    Updated: 2025/11/12 14:09:27 by fsitter          ###   ########.fr        #
+#    Updated: 2025/12/02 12:52:40 by fsitter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,10 +68,10 @@ RM = rm -f
 CREATION = ar rcs
 
 
-.c.o:
-	${CC} ${CFLAGS} -I . -c $< -o ${<:.c=.o}
+.c.o: ${HEADER}
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJECTS} ${HEADER}
+${NAME}: ${OBJECTS}
 	${CREATION} ${NAME} ${OBJECTS}
 
 clean:	

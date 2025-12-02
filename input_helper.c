@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 13:03:48 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 18:48:41 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 15:00:32 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	f_init_stack(t_stack *stack)
 	stack->last = NULL;
 	stack->size = 0;
 }
+
 int	f_fill_nodes(t_stack *a, char **av, int ac, int i)
 {
 	t_number	*new_node;

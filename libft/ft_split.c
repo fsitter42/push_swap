@@ -6,18 +6,13 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 08:47:56 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/12 13:54:58 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 14:56:12 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_split(char const *s, char c);
-static size_t	how_many_words(char const *si, char ci);
-static char		**make_words(char **pointerzuwords, const char *s, char c);
-static void		*free_delete(char **pointerzuwords, size_t word);
-
-static void	*free_delete(char **pointerzuwords, size_t word)
+void	*free_delete(char **pointerzuwords, size_t word)
 {
 	size_t	i;
 
@@ -31,7 +26,7 @@ static void	*free_delete(char **pointerzuwords, size_t word)
 	return (NULL);
 }
 
-static char	**make_words(char **pointerzuwords, const char *s, char c)
+char	**make_words(char **pointerzuwords, const char *s, char c)
 {
 	unsigned int	i;
 	size_t			len;
@@ -59,7 +54,7 @@ static char	**make_words(char **pointerzuwords, const char *s, char c)
 	return (pointerzuwords);
 }
 
-static size_t	how_many_words(char const *si, char ci)
+size_t	how_many_words(char const *si, char ci)
 {
 	size_t				i;
 	size_t				words;
