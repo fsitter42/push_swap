@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 15:29:33 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 19:01:01 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 19:05:50 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ int	f_rotate(t_stack *stack)
 	last = stack->bottom;
 	second = first->next;
 	prev_last = stack->bottom->previous;
+	
 	stack->top = last;
-	stack->top->next = second;
+	// stack->top->next = second;
 	prev_last->next = first;
 	first->next = NULL;
 	return (1);
