@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 15:29:33 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 17:22:29 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 19:01:01 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,21 @@ int	f_rotate(t_stack *stack)
 	last = stack->bottom;
 	second = first->next;
 	prev_last = stack->bottom->previous;
-	
 	stack->top = last;
 	stack->top->next = second;
-
 	prev_last->next = first;
 	first->next = NULL;
-
-
 	return (1);
 }
 
 void	ra(t_stack *stack_a)
 {
-	if (stack_a->size < 3)
-		sa(stack_a);
+	if (stack_a->size == 2)
+	{
+		f_swap(stack_a);
+		ft_putstr_fd("ra\n", 1);
+		return ;
+	}
 	else if (f_rotate(stack_a))
 		ft_putstr_fd("ra\n", 1);
 	else
@@ -48,7 +48,13 @@ void	ra(t_stack *stack_a)
 
 void	rb(t_stack *stack_b)
 {
-	if (f_rotate(stack_b))
+	if (stack_b->size == 2)
+	{
+		f_swap(stack_b);
+		ft_putstr_fd("rb\n", 1);
+		return ;
+	}
+	else if (f_rotate(stack_b))
 		ft_putstr_fd("rb\n", 1);
 	else
 		return ;
@@ -56,8 +62,16 @@ void	rb(t_stack *stack_b)
 
 void	rr(t_stack *stack_a, t_stack *stack_b)
 {
-	if (f_rotate(stack_a) && (f_rotate(stack_b)))
-		ft_putstr_fd("rr\n", 1);
-	else
+	if (stack_a->size < 2 || stack_b->size < 2)
 		return ;
+	if (stack_a->size > 2)
+		f_rotate(stack_a);
+	if (stack_a->size == 2)
+		f_swap(stack_a);
+	if (stack_b->size > 2)
+		f_rotate(stack_b);
+	if (stack_b->size == 2)
+		f_swap(stack_b);
+	ft_putstr_fd("rr\n", 1);
+	
 }

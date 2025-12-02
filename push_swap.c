@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 16:45:15 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/02 18:56:39 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 // 		int i = 1;
 // 		while (av[i])
 // 		{
-		
+
 // 			ft_printf("%s\n", av[i]);
 // 				i++;
 // 		}
@@ -49,8 +49,9 @@
 
 int	main(int ac, char **av)
 {
-	t_stack stack_a;
-	t_stack stack_b;
+	t_stack	stack_a;
+	t_stack	stack_b;
+
 	if (ac < 2)
 		return (0);
 	if (!f_valid_integers_plus(av, ac, 1))
@@ -77,14 +78,12 @@ int	main(int ac, char **av)
 	// f_print_stack(stack_a);
 	// ft_printf("Stack B:\n");
 	// f_print_stack(stack_b);
-
 	// f_print_stack(stack_a);
 	// f_print_stack(&stack_a);
-	//sa(&stack_a);
+	// sa(&stack_a);
 	ft_printf("\n");
-	//f_print_stack(stack_a);
+	// f_print_stack(stack_a);
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
-
 	ft_printf("valid\n");
 }
