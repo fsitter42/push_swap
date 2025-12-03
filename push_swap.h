@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 18:56:44 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/03 16:37:46 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 // prototypes of structs
 typedef struct s_number	t_number;
 typedef struct s_stack	t_stack;
-typedef struct s_stacks	t_stacks;
 
 // struct to safe each individual nr
 typedef struct s_number
@@ -70,4 +69,7 @@ int						f_rotate(t_stack *stack);
 void					ra(t_stack *stack_a);
 void					rb(t_stack *stack_b);
 void					rr(t_stack *stack_a, t_stack *stack_b);
+
+// reverse_rotate_operations.c
+int						f_reverse_rotate(t_stack *stack);
 #endif

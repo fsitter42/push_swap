@@ -19,9 +19,9 @@ CC = cc
 RM = rm -f
 
 
-%.o: %.c
+%.o: %.c ${HEADER}
 	${CC} ${CFLAGS} $ -c $< -o $@
-${NAME}: ${OBJECTS} ${HEADER}
+${NAME}: ${OBJECTS}
 	${CC} ${CFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
 clean:	
 	${RM} ${OBJECTS}
@@ -31,6 +31,8 @@ re:		fclean all
 all:	${NAME}
 make:	make all
 a:
+	make -C libft
+	make clean -C libft
 	cc *.c ${LIBFT} -g -o s
 	./s
 v:

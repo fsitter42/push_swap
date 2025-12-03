@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 18:56:39 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/03 16:37:39 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ int	main(int ac, char **av)
 	f_print_stack(stack_a);
 	ft_printf("Stack B:\n");
 	f_print_stack(stack_b);
-	ra(&stack_a);
+	//f_reverse_rotate(&stack_a);
+	//ra(&stack_a);
 	// pb(&stack_a, &stack_b);
 	ft_printf("Stack A:\n");
 	f_print_stack(stack_a);

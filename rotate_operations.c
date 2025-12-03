@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 15:29:33 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 19:06:07 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/03 16:17:45 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,28 @@
 
 int	f_rotate(t_stack *stack)
 {
-	t_number	*first;
-	t_number	*last;
-	t_number	*second;
-	t_number	*prev_last;
+	t_number	*old_top;
+	t_number	*new_top;
+	t_number	*old_bottom;
 
-	if (stack->size < 3 || !stack->top || !stack->bottom)
+	if (stack->size < 2 || !stack->top || !stack->bottom)
 		return (0);
-	first = stack->top;
-	last = stack->bottom;
-	second = first->next;
-	prev_last = stack->bottom->previous;
-	
-	stack->top = last;
-	stack->top->next = second;
-	prev_last->next = first;
-	first->next = NULL;
+	old_top = stack->top;
+	new_top = old_top->next;
+	old_bottom = stack->bottom;
+	stack->top = new_top;
+	if (new_top)
+		new_top->previous = NULL;
+	old_top->next = NULL;
+	old_top->previous = old_bottom;
+	old_bottom->next = old_top;
+	stack->bottom = old_top;
 	return (1);
 }
 
 void	ra(t_stack *stack_a)
 {
-	if (stack_a->size == 2)
-	{
-		f_swap(stack_a);
-		ft_putstr_fd("ra\n", 1);
-		return ;
-	}
-	else if (f_rotate(stack_a))
+	if (f_rotate(stack_a))
 		ft_putstr_fd("ra\n", 1);
 	else
 		return ;
@@ -49,13 +43,7 @@ void	ra(t_stack *stack_a)
 
 void	rb(t_stack *stack_b)
 {
-	if (stack_b->size == 2)
-	{
-		f_swap(stack_b);
-		ft_putstr_fd("rb\n", 1);
-		return ;
-	}
-	else if (f_rotate(stack_b))
+	if (f_rotate(stack_b))
 		ft_putstr_fd("rb\n", 1);
 	else
 		return ;
@@ -63,16 +51,8 @@ void	rb(t_stack *stack_b)
 
 void	rr(t_stack *stack_a, t_stack *stack_b)
 {
-	if (stack_a->size < 2 || stack_b->size < 2)
-		return ;
-	if (stack_a->size > 2)
-		f_rotate(stack_a);
-	if (stack_a->size == 2)
-		f_swap(stack_a);
-	if (stack_b->size > 2)
-		f_rotate(stack_b);
-	if (stack_b->size == 2)
-		f_swap(stack_b);
-	ft_putstr_fd("rr\n", 1);
-	
+	if (f_rotate(stack_a) && (f_rotate(stack_b)))
+		ft_putstr_fd("rr\n", 1);
+	else	
+	return ;
 }
