@@ -31,8 +31,8 @@ re:		fclean all
 all:	${NAME}
 make:	make all
 a:
-	make -C libft
-	make clean -C libft
+# 	make -C libft
+# 	make clean -C libft
 	cc *.c ${LIBFT} -g -o s
 	./s
 v:

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/03 16:37:46 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/03 16:56:47 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char					**argv_equals_two(char *avone, int *myac);
 
 // helper_2.c
 void					f_print_stack(t_stack stack);
+void					f_find_max(t_stack stack);
 
 // swap_operations.c
 int						f_swap(t_stack *stack);
