@@ -10,7 +10,10 @@ int f_max_runs(int max_index)
     return (i);
 }
 
-void    f_radix(t_stack stack_a, t_stack stack_b)
+void    f_radix(t_stack *stack_a, t_stack *stack_b)
 {
-    
+    int max_runs;
+
+    max_runs = f_max_runs(f_find_max_index(stack_a));
+
 }
