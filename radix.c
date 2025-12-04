@@ -9,3 +9,8 @@ int f_max_runs(int max_index)
         i++;
     return (i);
 }
+
+void    f_radix(t_stack stack_a, t_stack stack_b)
+{
+    
+}
