@@ -31,10 +31,10 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
                 ra(stack_a);
             j++;
         }
-        while (j > size / 2) //false bei ungerader anzahl
+        while (j-- > size / 2) //false bei ungerader anzahl
         {
             pa(stack_a, stack_b);
-            j--;
+            //j--;
         }
         i++;
     }
