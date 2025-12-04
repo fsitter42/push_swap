@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/03 16:56:47 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 16:07:30 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,9 @@ void					f_init_stack(t_stack *stack);
 int						f_fill_nodes(t_stack *a, char **av, int ac, int i);
 void					f_free_stack(t_stack *stack);
 
-// argv_equals_two.c
-char					**argv_equals_two(char *avone, int *myac); // delete
-
 // helper_2.c
-void					f_print_stack(t_stack stack); // delete
-void					f_find_max(t_stack stack); // delete
+void					f_print_stack(t_stack stack);
+void					f_find_max(t_stack stack);
 
 // swap_operations.c
 int						f_swap(t_stack *stack);
