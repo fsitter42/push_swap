@@ -55,32 +55,14 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	if (!f_valid_integers_plus(av, ac, 1))
-		return (ft_putstr_fd("ERROR:\nList contains non Integers or duplicates\n", 2), 0);
+		return (ft_putstr_fd("ERROR:\nList contains non Integers or duplicates\n",
+				2), 0);
 	f_init_stack(&stack_a);
 	f_init_stack(&stack_b);
 	if (!f_fill_nodes(&stack_a, av, ac, 1))
 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
-	ft_printf("Stack A:\n");
-	f_print_stack(stack_a);
-
 	f_sort_index(&stack_a, av, ac);
-
-	ft_printf("\n");
-
-	ft_printf("Stack A:\n");
-	f_print_stack(stack_a);
-	ft_printf("SIZE: %i\n", stack_a.size);
-	ft_printf("MAX INDEX: %i\n", f_find_max_index(&stack_a));
 	f_radix(&stack_a, &stack_b);
-
-	ft_printf("Stack A:\n");
-	f_print_stack(stack_a);
-
-
-	ft_printf("\n");
-
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
-	ft_printf("valid\n");
-	
 }
