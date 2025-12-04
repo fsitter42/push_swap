@@ -25,10 +25,10 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
         j = 0;
         while (j < size)
         {
-            if (stack_a->top->index >> i == 0)
-                pb(stack_a, stack_b);
-            else
+            if (stack_a->top->index & (1 << i))
                 ra(stack_a);
+            else
+                pb(stack_a, stack_b);
             j++;
         }
         while (j-- > size / 2) //false bei ungerader anzahl
