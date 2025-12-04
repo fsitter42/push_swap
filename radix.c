@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:10:42 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:10:43 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 17:26:57 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,32 +22,40 @@ int	f_max_runs(int max_index)
 	return (i);
 }
 
-void	f_radix(t_stack *stack_a, t_stack *stack_b)
+void	t_radix(t_stack *stack_a, t_stack *stack_b, int mr)
 {
-	int	max_runs;
 	int	size;
 	int	i;
 	int	j;
 
 	i = 0;
 	size = stack_a->size;
-	max_runs = f_max_runs(f_find_max_index(stack_a));
-	while (max_runs >= i)
+	while (mr > i)
 	{
 		j = 0;
 		while (j++ < size)
 		{
-			if (stack_a->top->index & (1 << i))
-				ra(stack_a);
-			else
+			if (!(stack_a->top->index & (1 << i)))
 				pb(stack_a, stack_b);
+			else if (stack_b->size > 0)
+				rr(stack_a, stack_b);
+			else
+				ra(stack_a);
 		}
-		while (stack_b->size != 0)
+		while (stack_b->size > 0)
 			pa(stack_a, stack_b);
 		if (f_is_sorted(stack_a))
-			break ;
+			return ;
 		i++;
 	}
+}
+
+void	f_pre_radix(t_stack *stack_a, t_stack *stack_b)
+{
+	int	max_runs;
+
+	max_runs = f_max_runs(f_find_max_index(stack_a));
+	t_radix(stack_a, stack_b, max_runs);
 }
 
 int	f_is_sorted(t_stack *stack_a)

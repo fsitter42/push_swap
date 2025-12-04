@@ -6,46 +6,12 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:14:17 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 18:15:27 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// int	main(int ac, char **av)
-// {
-// 	char	**myav;
-// 	int		myac;
-
-// 	myav = NULL;
-// 	myac = 0;
-// 	ft_printf("myac = %i\n", ac);
-// 	if (ac < 2)
-// 		return (0);
-// 	// if (ac == 2)
-// 	// {
-// 	// 	myav = argv_equals_two(av[1], &myac);
-// 	// 	if (myav == NULL)
-// 	// 		return (0);
-// 	// 	if (!f_valid_integers_plus(myav, myac, 0))
-// 	// 		return (free_delete(myav, myac),
-// 	// 			ft_putstr_fd("ERROR:\nNon Integers or duplicates\n", 2), 0);
-// 	// }
-// 	if (ac > 2)
-// 	{
-// 		if (!f_valid_integers_plus(av, ac, 1))
-// 			return (ft_putstr_fd("ERROR:\nNon Integers or duplicates\n", 2), 0);
-// 		int i = 1;
-// 		while (av[i])
-// 		{
-
-// 			ft_printf("%s\n", av[i]);
-// 				i++;
-// 		}
-// 	}
-// 	if (myav != NULL)
-// 		free_delete(myav, myac);
-// }
 
 int	main(int ac, char **av)
 {
@@ -55,21 +21,77 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	if (!f_valid_integers_plus(av, ac, 1))
-	{
-		ft_putstr_fd("ERROR:\nList contains non integers or duplicates\n", 2);
-		return (0);
-	}
+		return (ft_putstr_fd("ERROR\n", 2), 0);
 	f_init_stack(&stack_a);
 	f_init_stack(&stack_b);
 	if (!f_fill_nodes(&stack_a, av, ac, 1))
 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
 	f_sort_index(&stack_a, av, ac);
-	if (f_is_sorted(&stack_a))
-	{
-		ft_printf("sorted\n");
-		return (0);
-	}
-	f_radix(&stack_a, &stack_b);
-	f_free_stack(&stack_a);
-	f_free_stack(&stack_b);
+
+
+	// ft_printf("stack A\n");
+	// f_print_stack(stack_a);
+	// ft_printf("stack B\n");
+	// f_print_stack(stack_b);
+	
+	pb(&stack_a, &stack_b);
+	ft_printf("%i\n", stack_b.bottom->next->index);
+	pb(&stack_a, &stack_b);
+	ft_printf("%p\n", stack_b.bottom);
+	pb(&stack_a, &stack_b);
+	ft_printf("%p\n", stack_b.bottom);
+	pb(&stack_a, &stack_b);
+	
+	ft_printf("%p\n", stack_b.bottom);
+
+	ft_printf("stack A\n");
+	f_print_stack(stack_a);
+	ft_printf("stack B\n");
+	f_print_stack(stack_b);
+
+	ft_printf("SIZE OF STACKB: %i\n", stack_b.size);
+	ft_printf("\n");
+	ft_printf("\n");
+	ft_printf("\n");
+	ft_printf("\n");
+	//ra(&stack_a);
+	rb(&stack_b);
+	
+
+	ft_printf("stack A\n");
+	f_print_stack(stack_a);
+	ft_printf("stack B\n");
+	f_print_stack(stack_b);
+
+	
+	
 }
+
+// int	main(int ac, char **av)
+// {
+// 	t_stack	stack_a;
+// 	t_stack	stack_b;
+
+// 	if (ac < 2)
+// 		return (0);
+// 	if (!f_valid_integers_plus(av, ac, 1))
+// 		return (ft_putstr_fd("ERROR\n", 2), 0);
+// 	f_init_stack(&stack_a);
+// 	f_init_stack(&stack_b);
+// 	if (!f_fill_nodes(&stack_a, av, ac, 1))
+// 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
+// 	f_sort_index(&stack_a, av, ac);
+// 	if (f_is_sorted(&stack_a))
+// 		return (0);
+	
+	
+// 	f_print_stack(stack_a);
+	
+// 	f_pre_radix(&stack_a, &stack_b);
+// 	f_print_stack(stack_a);
+
+// 	if (!(f_is_sorted(&stack_a)))
+// 		return (-1);
+// 	f_free_stack(&stack_a);
+// 	f_free_stack(&stack_b);
+// }

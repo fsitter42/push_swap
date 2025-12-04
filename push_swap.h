@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:07:30 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 17:51:57 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int						f_find_max_index(t_stack *stack);
 
 // radix.c
 int						f_max_runs(int max_index);
-void					f_radix(t_stack *stack_a, t_stack *stack_b);
+void					t_radix(t_stack *stack_a, t_stack *stack_b, int mr);
 int						f_is_sorted(t_stack *stack_a);
+void					f_pre_radix(t_stack *stack_a, t_stack *stack_b);
 #endif
