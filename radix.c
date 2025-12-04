@@ -26,6 +26,8 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
         {
             if (stack_a->top->index >> i == 0)
                 
+        }
+
 
 
     }
