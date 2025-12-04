@@ -12,10 +12,6 @@
 
 #include "push_swap.h"
 
-int		f_push(t_stack *stack_a, t_stack *stack_b);
-void	pa(t_stack *stack_a, t_stack *stack_b);
-void	pb(t_stack *stack_a, t_stack *stack_b);
-
 int	f_push(t_stack *stack_a, t_stack *stack_b)
 {
 	t_number	*first_a;
