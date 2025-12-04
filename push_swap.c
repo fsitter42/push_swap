@@ -62,7 +62,13 @@ int	main(int ac, char **av)
 	if (!f_fill_nodes(&stack_a, av, ac, 1))
 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
 	f_sort_index(&stack_a, av, ac);
+	if (f_is_sorted(&stack_a))
+	{
+		ft_printf("sorted\n");
+		return (0);
+	}
 	f_radix(&stack_a, &stack_b);
+	f_print_stack(stack_a);
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 }

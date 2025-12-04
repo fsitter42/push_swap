@@ -34,6 +34,22 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
         }
         while (stack_b->size != 0)
             pa(stack_a, stack_b);
+        if (f_is_sorted(stack_a))
+            break;
         i++;
     }
+}
+
+int f_is_sorted(t_stack *stack_a)
+{
+    t_number *current;
+
+    current = stack_a->top;
+    while (current && current->next)
+    {
+        if (current->index > current->next->index)
+            return (0);
+        current = current->next;
+    }
+    return (1);
 }
