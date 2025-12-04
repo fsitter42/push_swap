@@ -20,7 +20,7 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
     i = 0;
     size = stack_a->size;
     max_runs = f_max_runs(f_find_max_index(stack_a));
-    while (max_runs > i)
+    while (max_runs >= i)
     {
         j = 0;
         while (j < size)
@@ -29,13 +29,11 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
                 ra(stack_a);
             else
                 pb(stack_a, stack_b);
+
             j++;
         }
-        while (j-- > size / 2) //false bei ungerader anzahl
-        {
+        while (stack_b->size != 0)
             pa(stack_a, stack_b);
-            //j--;
-        }
         i++;
     }
 }
