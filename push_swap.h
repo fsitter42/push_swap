@@ -82,4 +82,5 @@ int						f_find_max_index(t_stack *stack);
 
 // radix.c
 int						f_max_runs(int max_index);
+void					f_radix(t_stack *stack_a, t_stack *stack_b);
 #endif
