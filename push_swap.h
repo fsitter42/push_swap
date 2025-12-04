@@ -79,4 +79,7 @@ int						*f_create_int_arr(int ac, char **av);
 int						f_sort_index(t_stack *stack, char **av, int ac);
 void					f_sort_in_stack(t_stack *stack, int *arr, int ac);
 int						f_find_max_index(t_stack stack);
+
+// radix.c
+int						f_max_runs(int max_index);
 #endif
