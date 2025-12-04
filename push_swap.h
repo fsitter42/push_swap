@@ -15,7 +15,6 @@
 
 // includes
 # include "libft/libft.h"
-# include <limits.h>
 
 // prototypes of structs
 typedef struct s_number	t_number;
