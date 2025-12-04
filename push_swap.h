@@ -48,7 +48,7 @@ int						f_fill_nodes(t_stack *a, char **av, int ac, int i);
 void					f_free_stack(t_stack *stack);
 
 // argv_equals_two.c
-char					**argv_equals_two(char *avone, int *myac);
+char					**argv_equals_two(char *avone, int *myac); // delete
 
 // helper_2.c
 void					f_print_stack(t_stack stack);
@@ -73,4 +73,10 @@ void					rr(t_stack *stack_a, t_stack *stack_b);
 
 // reverse_rotate_operations.c
 int						f_reverse_rotate(t_stack *stack);
+
+// sort_index.c
+void					ft_sort_int_tab(int *tab, int size);
+int						*f_create_int_arr(int ac, char **av);
+int						f_sort_index(t_stack *stack, char **av, int ac);
+void					f_sort_in_stack(t_stack *stack, int *arr, int ac);
 #endif
