@@ -12,12 +12,6 @@
 
 #include "push_swap.h"
 
-int		f_valid_integers_plus(char **av, int ac, int i);
-int		f_find_duplicate(char **av, int ac, int i);
-void	f_init_stack(t_stack *stack);
-int		f_fill_nodes(t_stack *a, char **av, int ac, int i);
-void	f_free_stack(t_stack *stack);
-
 int	f_valid_integers_plus(char **av, int ac, int i)
 {
 	char	*itoa_of_atoi;
