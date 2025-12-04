@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 01:02:03 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/03 17:02:22 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 16:11:21 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	f_print_stack(t_stack stack)
 
 void	f_find_max(t_stack stack)
 {
-	t_number *current;
-	t_number *max;
+	t_number	*current;
+	t_number	*max;
 
 	current = stack.top;
 	max = current;

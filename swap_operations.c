@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 00:26:46 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/02 15:59:15 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 16:11:07 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@ int	f_swap(t_stack *stack)
 	first = stack->top;
 	second = first->next;
 	third = second->next;
-	
 	stack->top = second;
 	second->next = first;
 	first->next = third;
-	
 	if (third)
 		third->previous = first;
 	first->previous = second;

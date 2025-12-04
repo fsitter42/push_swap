@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   sort_index.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 09:55:30 by fsitter           #+#    #+#             */
-/*   Updated: 2025/08/25 13:31:44 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 16:08:21 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	*f_create_int_arr(int ac, char **av)
 int	f_sort_index(t_stack *stack, char **av, int ac)
 {
 	int	*arr;
-	int i;
+	int	i;
 
 	arr = f_create_int_arr(ac, av);
 	if (!arr)
@@ -90,6 +90,7 @@ void	f_sort_in_stack(t_stack *stack, int *arr, int ac)
 		current = current->next;
 	}
 }
+
 int	f_find_max_index(t_stack *stack)
 {
 	t_number	*current;
