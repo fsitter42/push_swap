@@ -90,3 +90,19 @@ void	f_sort_in_stack(t_stack *stack, int *arr, int ac)
 		current = current->next;
 	}
 }
+int	f_find_max_index(t_stack stack)
+{
+	t_number	*current;
+	t_number	*max;
+	int			max_index;
+
+	current = stack.top;
+	max = current;
+	while (current)
+	{
+		if (current->number > max->number)
+			max = current;
+		current = current->next;
+	}
+	return (max->index);
+}
