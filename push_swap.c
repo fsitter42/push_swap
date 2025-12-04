@@ -70,8 +70,8 @@ int	main(int ac, char **av)
 	ft_printf("Stack A:\n");
 	f_print_stack(stack_a);
 	ft_printf("SIZE: %i\n", stack_a.size);
-	ft_printf("MAX INDEX: %i\n", f_find_max(stack_a));
-	ft_printf("MAX RUNS: %i\n", f_max_runs(f_find_max_index));
+	ft_printf("MAX INDEX: %i\n", f_find_max_index(stack_a));
+	ft_printf("MAX RUNS: %i\n", f_max_runs(f_find_max_index(stack_a)));
 
 
 
