@@ -1,56 +1,10 @@
-INPUT:
-	vl if ac < 3 weil man ncihts sortieren kann
 
-	
+hardcode 2 3 4 5
 
-MAKEFILE:
-	delete make a
+cleanup delete unused functions
 
-
-OPERATIONS:
-	do all OPERATIONS
-	in ss do sa or sb if the other doesnt do anything????
-
-	push_operations.c
-	rotate_operations.c
-	rev_rotate_operations.c
-	
-
-
-INDEXES:
-	sort the indexes bubblesort with number->indexes
+j++ in radix
 
 radix
 junk
 turk
-
-maxruns()
-{
-	while (max_index >> i != 0)
-		i++;
-	return i;
-}
-
-int i = 0;
-int size = stacka->size;
-while (i < maxruns)
-{
-	while (j < stacka->size)
-	{
-		if index >> i == 0
-			push to b
-		else
-			rotate to bottom
-		j++;
-			
-	}
-	i++;
-}
-
-
-ROTATE:
-
-i made both in one splitt them up
-
-
-foto

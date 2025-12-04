@@ -23,14 +23,14 @@ void    f_radix(t_stack *stack_a, t_stack *stack_b)
     while (max_runs >= i)
     {
         j = 0;
-        while (j < size)
+        while (j++ < size) // entwede hier j++ falls es hier nicht passt einfach f_call_radix wo ich max_runs ausführe und and f_radix(sa, sb, mr) übergebe
         {
             if (stack_a->top->index & (1 << i))
                 ra(stack_a);
             else
                 pb(stack_a, stack_b);
+            // j++; // oder hier j++;
 
-            j++;
         }
         while (stack_b->size != 0)
             pa(stack_a, stack_b);

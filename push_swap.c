@@ -68,7 +68,7 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	f_radix(&stack_a, &stack_b);
-	f_print_stack(stack_a);
+	// f_print_stack(stack_a);
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 }
