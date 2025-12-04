@@ -52,7 +52,7 @@ char					**argv_equals_two(char *avone, int *myac); // delete
 
 // helper_2.c
 void					f_print_stack(t_stack stack);
-void					f_find_max(t_stack stack);
+int						f_find_max(t_stack stack);
 
 // swap_operations.c
 int						f_swap(t_stack *stack);

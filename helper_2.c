@@ -26,10 +26,11 @@ void	f_print_stack(t_stack stack)
 	}
 }
 
-void	f_find_max(t_stack stack)
+int	f_find_max(t_stack stack)
 {
-	t_number *current;
-	t_number *max;
+	t_number	*current;
+	t_number	*max;
+	int			max_index;
 
 	current = stack.top;
 	max = current;
@@ -39,6 +40,5 @@ void	f_find_max(t_stack stack)
 			max = current;
 		current = current->next;
 	}
-	ft_printf("MAX_NUMBER %i\tMAX_INDEX %i\n", max->number, max->index);
+	return (max->index);
 }
-

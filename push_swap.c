@@ -71,7 +71,7 @@ int	main(int ac, char **av)
 	f_print_stack(stack_a);
 	ft_printf("SIZE: %i\n", stack_a.size);
 
-	f_sort_index(&stack_a, av, ac);
+
 
 	ft_printf("\n");
 

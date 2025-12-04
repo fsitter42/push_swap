@@ -60,12 +60,15 @@ int	*f_create_int_arr(int ac, char **av)
 int	f_sort_index(t_stack *stack, char **av, int ac)
 {
 	int	*arr;
+	int i;
 
 	arr = f_create_int_arr(ac, av);
 	if (!arr)
 		return (0);
 	ft_sort_int_tab(arr, ac - 1);
 	f_sort_in_stack(stack, arr, ac);
+	i = 0;
+	free(arr);
 	return (1);
 }
 
