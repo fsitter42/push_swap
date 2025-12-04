@@ -73,6 +73,8 @@ int	main(int ac, char **av)
 	ft_printf("MAX INDEX: %i\n", f_find_max_index(&stack_a));
 	f_radix(&stack_a, &stack_b);
 
+	ft_printf("Stack A:\n");
+	f_print_stack(stack_a);
 
 
 	ft_printf("\n");
