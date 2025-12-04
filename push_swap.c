@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 18:15:27 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/04 18:21:10 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 	// f_print_stack(stack_b);
 	
 	pb(&stack_a, &stack_b);
-	ft_printf("%i\n", stack_b.bottom->next->index);
+	ft_printf("%i\n", stack_b.bottom->index);
 	pb(&stack_a, &stack_b);
 	ft_printf("%p\n", stack_b.bottom);
 	pb(&stack_a, &stack_b);

@@ -12,3 +12,5 @@ turk
 
 ich glaube mein push b funktioniert nicht weil es stack b nicht richtig verlinkt kein bottom
 deswegegen geht rotate b auch nicht weil es ncihts zum rotieren finden kein kein bottom da ist
+
+auch wenn ich versuche bottom zu de refferencen bekomme ich einen segfault.
