@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 17:51:57 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 15:16:03 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void					sb(t_stack *stack_b);
 void					ss(t_stack *stack_a, t_stack *stack_b);
 
 // push_operations.c
-int						f_push(t_stack *stack_a, t_stack *stack_b);
+int						f_push(t_stack *src, t_stack *dest);
 void					pa(t_stack *stack_a, t_stack *stack_b);
 void					pb(t_stack *stack_a, t_stack *stack_b);
 

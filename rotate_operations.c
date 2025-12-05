@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 15:29:33 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 17:59:41 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 15:46:57 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ra(t_stack *stack_a)
 void	rr(t_stack *stack_a, t_stack *stack_b)
 {
 	if (f_rotate(stack_a) && (f_rotate(stack_b)))
-		ft_putstr_fd("eooo was geht\n", 1);
+		ft_putstr_fd("rr\n", 1);
 	else
 		return ;
 }
