@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 01:02:03 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:11:21 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 17:12:01 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,20 @@ void	f_find_max(t_stack stack)
 		current = current->next;
 	}
 	ft_printf("MAX_NUMBER %i\tMAX_INDEX %i\n", max->number, max->index);
+}
+
+void	f_find_min(t_stack stack)
+{
+	t_number	*current;
+	t_number	*min;
+
+	current = stack.top;
+	min = current;
+	while (current)
+	{
+		if (current->number < min->number)
+			min = current;
+		current = current->next;
+	}
+	ft_printf("MAX_NUMBER %i\tMAX_INDEX %i\n", min->number, min->index);
 }

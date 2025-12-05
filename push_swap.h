@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/05 17:02:31 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 17:36:03 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void					f_free_stack(t_stack *stack);
 
 // helper_2.c
 void					f_print_stack(t_stack stack);
-void					f_find_max(t_stack stack);
+void	f_find_max(t_stack stack); // unused
+void	f_find_min(t_stack stack); // unused
 
 // swap_operations.c
 int						f_swap(t_stack *stack);
@@ -85,4 +86,6 @@ void					f_pre_radix(t_stack *stack_a, t_stack *stack_b);
 
 // quicksort.c
 void					f_quicksort(t_stack stack_a, t_stack stack_b);
+int						f_find_min_index(t_stack *stack);
+int						f_ra_or_rra(t_stack *stack, int min_index);
 #endif

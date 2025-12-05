@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/05 16:00:53 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 17:16:56 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ int	main(int ac, char **av)
 	f_sort_index(&stack_a, av, ac);
 	if (f_is_sorted(&stack_a))
 		return (0);
-	f_pre_radix(&stack_a, &stack_b);
-	if (!(f_is_sorted(&stack_a)))
-		return (-1);
+
+	f_find_min(stack_a);
+	
+	// f_pre_radix(&stack_a, &stack_b);
+	// if (!(f_is_sorted(&stack_a)))
+	// 	return (-1);
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 }
