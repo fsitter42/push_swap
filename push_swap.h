@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/05 15:16:03 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 16:53:44 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,7 @@ int						f_max_runs(int max_index);
 void					t_radix(t_stack *stack_a, t_stack *stack_b, int mr);
 int						f_is_sorted(t_stack *stack_a);
 void					f_pre_radix(t_stack *stack_a, t_stack *stack_b);
+
+// quicksort.c
+void	f_quicksort(t_stack stack_a, t_stack stack_b);
 #endif
