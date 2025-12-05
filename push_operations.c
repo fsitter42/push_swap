@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 01:43:30 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/05 15:56:10 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/05 15:59:32 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	f_push(t_stack *src, t_stack *dest)
 	{
 		node->next = dest->top;
 		dest->top->previous = node;
-
 	}
 	dest->top = node;
 	dest->size++;
