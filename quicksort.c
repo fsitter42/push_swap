@@ -67,6 +67,7 @@ int	f_ra_or_rra(t_stack *stack, int min_index)
 		if (current->index == min_index)
 			break ;
 		i++;
+// current = current->next;
 	}
 	if (i > stack->size / 2)
 		return (0); // rr or rra
