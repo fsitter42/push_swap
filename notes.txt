@@ -1,5 +1,5 @@
 
-hardcode 2 3 4 5
+check if quicksort is good for (or hardcode 2 3 4 5)
 
 cleanup delete unused functions
 
@@ -10,7 +10,10 @@ junk
 turk
 
 
-ich glaube mein push b funktioniert nicht weil es stack b nicht richtig verlinkt kein bottom
-deswegegen geht rotate b auch nicht weil es ncihts zum rotieren finden kein kein bottom da ist
 
-auch wenn ich versuche bottom zu de refferencen bekomme ich einen segfault.
+quick sort:
+
+check where is min > while (not min) current = current->next way++; 
+if way < stack->size/2 ra; else rra; 
+while atop value not= min; then pb
+
