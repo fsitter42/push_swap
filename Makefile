@@ -27,8 +27,9 @@ RM = rm -f
 %.o: %.c ${HEADER}
 	${CC} ${CFLAGS} $ -c $< -o $@
 ${NAME}: ${OBJECTS}
-	${CC} ${CFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
 	make -C libft
+	${CC} ${CFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
+
 clean:	
 	${RM} ${OBJECTS}
 	make clean -C libft
@@ -38,13 +39,5 @@ fclean:	clean
 re:		fclean all
 all:	${NAME}
 make:	make all
-a:
-	make -C libft
-	make clean -C libft
-	cc *.c ${LIBFT} -g -o s
-	./s
-v:
-	cc *.c ${LIBFT} -g -o s
-	valgrind ./s
 
 .PHONY: clean fclean re all
