@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quicksort.c                                        :+:      :+:    :+:   */
+/*   microsort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/05 16:51:50 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/06 13:09:24 by fsitter          ###   ########.fr       */
+/*   Created: 2025/12/06 12:44:58 by fsitter           #+#    #+#             */
+/*   Updated: 2025/12/06 13:23:23 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	f_quicksort(t_stack *stack_a, t_stack *stack_b)
+void	f_sort_three(t_stack *stack)
+{
+	int	max_index;
+
+	if (stack->size > 3)
+		return ;
+	max_index = f_find_max_index(stack);
+	if (stack->top->index == max_index)
+		ra(stack);
+	else if (stack->top->next->index == max_index)
+		rra(stack);
+	if (stack->top->index > stack->top->next->index)
+		sa(stack);
+}
+
+void	f_sort_five(t_stack *stack_a, t_stack *stack_b)
 {
 	int	min_index;
 
-	while (stack_a->size > 0)
+	if (stack_a->size > 25)
+		return ;
+	while (stack_a->size > 3)
 	{
 		min_index = f_find_min_index(stack_a);
 		if (f_ra_or_rra(stack_a, min_index) == 1)
@@ -32,49 +49,20 @@ void	f_quicksort(t_stack *stack_a, t_stack *stack_b)
 			pb(stack_a, stack_b);
 		}
 	}
+	f_sort_three(stack_a);
 	while (stack_b->size > 0)
 		pa(stack_a, stack_b);
-	return ;
 }
 
-int	f_find_min_index(t_stack *stack)
+void	f_micro_sort(t_stack *stack_a, t_stack *stack_b)
 {
-	t_number	*current;
-	t_number	*min;
-	int			min_index;
-
-	current = stack->top;
-	min = current;
-	while (current)
+	if (stack_a->size == 2)
 	{
-		if (current->number < min->number)
-			min = current;
-		current = current->next;
+		if (!f_is_sorted(stack_a))
+			ra(stack_a);
 	}
-	return (min->index);
+	else if (stack_a->size == 3)
+		f_sort_three(stack_a);
+	else if (stack_a->size > 3 && stack_a->size < 25)
+		f_sort_five(stack_a, stack_b);
 }
-
-int	f_ra_or_rra(t_stack *stack, int min_index)
-{
-	t_number	*current;
-	int			i;
-
-	i = 0;
-	current = stack->top;
-	while (current)
-	{
-		if (current->index == min_index)
-			break ;
-		current = current->next;
-		i++;
-	}
-	if (i > stack->size / 2)
-		return (0); // rr or rra
-	return (1);     // rr or rra
-}
-
-/*
-check where is min > while (not min) current = current->next way++;
-if way < stack->size/2 ra; else rra;
-while atop value not= min; then pb
-*/

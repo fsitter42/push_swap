@@ -9,11 +9,3 @@ radix
 junk
 turk
 
-
-
-quick sort:
-
-check where is min > while (not min) current = current->next way++; 
-if way < stack->size/2 ra; else rra; 
-while atop value not= min; then pb
-
