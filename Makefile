@@ -1,10 +1,15 @@
 NAME = push_swap
 
-SOURCE = 	push_swap.c \
+SOURCE = 	push_operations.c \
+			radix.c \
 			input_helper.c \
-			operations.c
-
-			
+			push_swap.c \
+			reverse_rotate_operations.c \
+			sort_index.c \
+			rotate_operations.c \
+			swap_operations.c \
+			microsort.c \
+			quicksort.c			
 
 HEADER = push_swap.h
 
@@ -23,16 +28,19 @@ RM = rm -f
 	${CC} ${CFLAGS} $ -c $< -o $@
 ${NAME}: ${OBJECTS}
 	${CC} ${CFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
+	make -C libft
 clean:	
 	${RM} ${OBJECTS}
+	make clean -C libft
 fclean:	clean
 		${RM} ${NAME}
+		make fclean -C libft
 re:		fclean all
 all:	${NAME}
 make:	make all
 a:
-# 	make -C libft
-# 	make clean -C libft
+	make -C libft
+	make clean -C libft
 	cc *.c ${LIBFT} -g -o s
 	./s
 v:

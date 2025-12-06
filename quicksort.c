@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 16:51:50 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/06 13:09:24 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:32:52 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	f_find_min_index(t_stack *stack)
 {
 	t_number	*current;
 	t_number	*min;
-	int			min_index;
 
 	current = stack->top;
 	min = current;
@@ -57,7 +56,7 @@ int	f_find_min_index(t_stack *stack)
 int	f_ra_or_rra(t_stack *stack, int min_index)
 {
 	t_number	*current;
-	int			i;
+	size_t		i;
 
 	i = 0;
 	current = stack->top;
