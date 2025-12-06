@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 11:10:25 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/06 13:20:10 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:40:44 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,49 +39,3 @@ int	main(int ac, char **av)
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 }
-
-// int	main(int ac, char **av)
-// {
-// 	t_stack	stack_a;
-// 	t_stack	stack_b;
-
-// 	if (ac < 2)
-// 		return (0);
-// 	if (!f_valid_integers_plus(av, ac, 1))
-// 		return (ft_putstr_fd("ERROR\n", 2), 0);
-// 	f_init_stack(&stack_a);
-// 	f_init_stack(&stack_b);
-// 	if (!f_fill_nodes(&stack_a, av, ac, 1))
-// 		return (ft_putstr_fd("ERROR:\nMalloc!\n", 2), 0);
-// 	f_sort_index(&stack_a, av, ac);
-
-// 	// ft_printf("stack A\n");
-// 	// f_print_stack(stack_a);
-// 	// ft_printf("\nstack B\n");
-// 	// f_print_stack(stack_b);
-
-// 	pb(&stack_a, &stack_b);
-// 	pb(&stack_a, &stack_b);
-
-// 	ft_printf("stack A\n");
-// 	f_print_stack(stack_a);
-// 	ft_printf("\nstack B\n");
-// 	f_print_stack(stack_b);
-
-// 	rr(&stack_a, &stack_b);
-
-// 	ft_printf("stack A\n");
-// 	f_print_stack(stack_a);
-// 	ft_printf("\nstack B\n");
-// 	f_print_stack(stack_b);
-
-// // 	// ft_printf("\n\n\n\nstack B\n");
-// // 	// f_print_stack(stack_b);
-// // 	// ft_printf("\n\n\nTOP\n");
-// // 	// ft_printf("NUMBER %i\tINDEX %i\n", stack_b.top->number,
-// 		stack_b.top->index);
-// 		// 	// ft_printf("BOT\n");
-// 		// 	// ft_printf("NUMBER %i\tINDEX %i\n", stack_b.bottom->number,
-// 		stack_b.bottom->index);
-
-// 		// }

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 12:19:23 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:12:49 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:45:39 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ void	rra(t_stack *stack_a)
 		return ;
 }
 
-void	rrr(t_stack *stack_a, t_stack *stack_b)
-{
-	if (f_reverse_rotate(stack_a) && (f_reverse_rotate(stack_b)))
-		ft_putstr_fd("rrr\n", 1);
-	else
-		return ;
-}
+// void	rrr(t_stack *stack_a, t_stack *stack_b)
+// {
+// 	if (f_reverse_rotate(stack_a) && (f_reverse_rotate(stack_b)))
+// 		ft_putstr_fd("rrr\n", 1);
+// 	else
+// 		return ;
+// }
 
-void	rrb(t_stack *stack_b)
-{
-	if (f_reverse_rotate(stack_b))
-		ft_putstr_fd("rrb\n", 1);
-	else
-		return ;
-}
+// void	rrb(t_stack *stack_b)
+// {
+// 	if (f_reverse_rotate(stack_b))
+// 		ft_putstr_fd("rrb\n", 1);
+// 	else
+// 		return ;
+// }

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 16:51:50 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/06 13:32:52 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:41:53 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,6 @@ int	f_ra_or_rra(t_stack *stack, int min_index)
 		i++;
 	}
 	if (i > stack->size / 2)
-		return (0); // rr or rra
-	return (1);     // rr or rra
+		return (0);
+	return (1);
 }
-
-/*
-check where is min > while (not min) current = current->next way++;
-if way < stack->size/2 ra; else rra;
-while atop value not= min; then pb
-*/

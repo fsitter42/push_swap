@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 00:26:46 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/04 16:11:07 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:45:16 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ void	sa(t_stack *stack_a)
 		return ;
 }
 
-void	sb(t_stack *stack_b)
-{
-	if (f_swap(stack_b))
-		ft_putstr_fd("sb\n", 1);
-	else
-		return ;
-}
+// void	sb(t_stack *stack_b)
+// {
+// 	if (f_swap(stack_b))
+// 		ft_putstr_fd("sb\n", 1);
+// 	else
+// 		return ;
+// }
 
-void	ss(t_stack *stack_a, t_stack *stack_b)
-{
-	if (f_swap(stack_a) && (f_swap(stack_b)))
-		ft_putstr_fd("ss\n", 1);
-	else
-		return ;
-}
+// void	ss(t_stack *stack_a, t_stack *stack_b)
+// {
+// 	if (f_swap(stack_a) && (f_swap(stack_b)))
+// 		ft_putstr_fd("ss\n", 1);
+// 	else
+// 		return ;
+// }

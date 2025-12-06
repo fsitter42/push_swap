@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:50:20 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/06 13:27:33 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/06 13:44:27 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ void					f_free_stack(t_stack *stack);
 // swap_operations.c
 int						f_swap(t_stack *stack);
 void					sa(t_stack *stack_a);
-void					sb(t_stack *stack_b);
-void					ss(t_stack *stack_a, t_stack *stack_b);
 
 // push_operations.c
 int						f_push(t_stack *src, t_stack *dest);
@@ -60,14 +58,12 @@ void					pb(t_stack *stack_a, t_stack *stack_b);
 // rotate_operations.c
 int						f_rotate(t_stack *stack);
 void					ra(t_stack *stack_a);
-void					rb(t_stack *stack_b);
+
 void					rr(t_stack *stack_a, t_stack *stack_b);
 
 // reverse_rotate_operations.c
 int						f_reverse_rotate(t_stack *stack);
 void					rra(t_stack *stack_a);
-void					rrr(t_stack *stack_a, t_stack *stack_b);
-void					rrb(t_stack *stack_b);
 
 // sort_index.c
 void					ft_sort_int_tab(int *tab, int size);
