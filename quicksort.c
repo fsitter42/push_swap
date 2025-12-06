@@ -15,26 +15,26 @@
 void	f_quicksort(t_stack *stack_a, t_stack *stack_b)
 {
 	int	min_index;
-	while (!f_is_sorted) //not empty
+	while (stack_a->size > 0)
 	{
-		min_index = f_find_min_index(&stack_a);
+		min_index = f_find_min_index(stack_a);
 		if (f_ra_or_rra(stack_a, min_index) == 1)
 		{
-			while (stack_a->top != min_index)
-				ra(stack_a)
-			pb()	
+			while (stack_a->top->index != min_index)
+				ra(stack_a);
+			pb(stack_a, stack_b);	
 		}
 		else
 		{
-			while (stack_a->top != min_index)
-				rra(stack_a)
-			pb()	
+			while (stack_a->top->index != min_index)
+				rra(stack_a);
+			pb(stack_a, stack_b);	
 		}
 	}
 	while (stack_b->size > 0)
-		pa();
-	if (!f_is_sorted)
-		return -1; // dann muss int aber kann auch auserhalb
+		pa(stack_a, stack_b);
+	// if (!f_is_sorted)
+	// 	return -1; // dann muss int aber kann auch auserhalb
 	return ;
 }
 
@@ -66,8 +66,8 @@ int	f_ra_or_rra(t_stack *stack, int min_index)
 	{
 		if (current->index == min_index)
 			break ;
+		current = current->next;
 		i++;
-// current = current->next;
 	}
 	if (i > stack->size / 2)
 		return (0); // rr or rra

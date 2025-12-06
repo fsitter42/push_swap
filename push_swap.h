@@ -70,6 +70,9 @@ void					rr(t_stack *stack_a, t_stack *stack_b);
 
 // reverse_rotate_operations.c
 int						f_reverse_rotate(t_stack *stack);
+void					rra(t_stack *stack_a);
+void					rrr(t_stack *stack_a, t_stack *stack_b);
+void					rrb(t_stack *stack_b);
 
 // sort_index.c
 void					ft_sort_int_tab(int *tab, int size);
@@ -85,7 +88,7 @@ int						f_is_sorted(t_stack *stack_a);
 void					f_pre_radix(t_stack *stack_a, t_stack *stack_b);
 
 // quicksort.c
-void					f_quicksort(t_stack stack_a, t_stack stack_b);
+void					f_quicksort(t_stack *stack_a, t_stack *stack_b);
 int						f_find_min_index(t_stack *stack);
 int						f_ra_or_rra(t_stack *stack, int min_index);
 #endif

@@ -32,3 +32,27 @@ int	f_reverse_rotate(t_stack *stack)
 	stack->bottom = new_bottom;
 	return (1);
 }
+
+void	rra(t_stack *stack_a)
+{
+	if (f_reverse_rotate(stack_a))
+		ft_putstr_fd("rra\n", 1);
+	else
+		return ;
+}
+
+void	rrr(t_stack *stack_a, t_stack *stack_b)
+{
+	if (f_reverse_rotate(stack_a) && (f_reverse_rotate(stack_b)))
+		ft_putstr_fd("rrr\n", 1);
+	else
+		return ;
+}
+
+void	rrb(t_stack *stack_b)
+{
+	if (f_reverse_rotate(stack_b))
+		ft_putstr_fd("rrb\n", 1);
+	else
+		return ;
+}

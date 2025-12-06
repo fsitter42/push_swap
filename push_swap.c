@@ -28,12 +28,12 @@ int	main(int ac, char **av)
 	f_sort_index(&stack_a, av, ac);
 	if (f_is_sorted(&stack_a))
 		return (0);
-
-	f_find_min(stack_a);
-	
-	// f_pre_radix(&stack_a, &stack_b);
-	// if (!(f_is_sorted(&stack_a)))
-	// 	return (-1);
+	if (ac < 51)
+		f_quicksort(&stack_a, &stack_b);
+	else
+		f_pre_radix(&stack_a, &stack_b);
+	if (!(f_is_sorted(&stack_a)))
+		return (-1);
 	f_free_stack(&stack_a);
 	f_free_stack(&stack_b);
 }
